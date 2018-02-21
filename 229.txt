@@ -1,0 +1,110 @@
+2eo2	Dwight Van der Velpen	22-09
+
+Opgave 1, Knipper LED:
+
+	int LED1 = 2;
+
+	void setup() {
+		pinMode(LED1 ,OUTPUT);
+	}
+
+	void loop() {
+		digitalWrite(LED1 ,HIGH);
+		delay(500);
+		digitalWrite(LED1 ,LOW);
+		delay(500);
+	}
+
+
+
+Opgave 2, Looplicht:
+	
+	int LED1 = 2;
+	int LED2 = 3;
+	int LED3 = 4;
+	int LED4 = 5;
+
+	void setup() {
+		pinMode(LED1 ,OUTPUT);
+		pinMode(LED2 ,OUTPUT);
+		pinMode(LED3 ,OUTPUT);
+		pinMode(LED4 ,OUTPUT);
+	}
+
+	void loop() {
+		digitalWrite(LED4 ,LOW);
+		digitalWrite(LED1 ,HIGH);
+		delay(500);
+		digitalWrite(LED1 ,LOW);
+		digitalWrite(LED2 ,HIGH);
+		delay(500);
+		digitalWrite(LED2 ,LOW);
+		digitalWrite(LED3 ,HIGH);
+		delay(500);
+		digitalWrite(LED3 ,LOW);
+		digitalWrite(LED4 ,HIGH);
+		delay(500);
+	}
+
+
+
+Opgave 3, Roteren:
+
+	void setup() {
+		for(int x=2; x<=5;x++){
+			pinMode(x,OUTPUT);
+		}
+	}
+
+	void loop() {
+		for(int x=2; x<=5;x++){		
+			digitalWrite(x,HIGH);
+			delay(500);
+			digitalWrite(x-1,LOW);
+		}
+	}
+
+
+
+Opgave 4, Arrays:
+
+	const byte ledArray [] = {2 ,3 ,4 ,5};
+
+	void setup() {
+		for(int x=2; x<=5;x++){
+			pinMode(x,OUTPUT);
+		}
+	}
+
+	void loop() {
+		for(int x=0; x<=3;x++){
+			digitalWrite(ledArray[x],HIGH);
+			delay(500);
+			digitalWrite(ledArray[x],LOW);
+		}
+	}
+
+
+
+Opgave 5, Heen- en terug:
+
+	const byte ledArray [] = {2 ,3 ,4 ,5};
+	int x;
+	int richting;
+
+	void setup() {
+		for(int x=2; x<=5;x++){
+			pinMode(x,OUTPUT);
+		}
+		richting = 1;
+	}
+
+	void loop() {
+		digitalWrite(ledArray[x],HIGH);
+		delay(500);
+		digitalWrite(ledArray[x],LOW);
+		x += richting;
+		if((x==3)||(x==0)){
+	    	richting *= -1;
+		}
+	}

@@ -1,0 +1,46 @@
+Commando Lijst µControllers2
+----------------------------
+
+Basis programma:
+
+	void setup(){
+		//eenmaals uitgevoerd in begin
+
+	}
+
+	void loop(){
+		//herhaald uitgevoerd
+
+	}
+
+Declareren Inputs en Outputs: 
+	
+	pinMode(<pinNr>, <stand>); 
+	//stand = OUTPUT of INPUT
+	//pinNr kan ook variableNaam zijn
+
+OutputPin/inputPin beinvloeden:
+	digitalRead(<pinNr>);	
+	digitalWrite(<pinNr>, <stand>);
+	//stand = LOW of HIGH
+	//pinNr kan ook variableNaam zijn
+
+Delay:
+
+	delay(<ms>);
+
+Variable:
+
+	<staat> <type> <naam>; 
+	//mag ook gedeclareed worden (= 5)
+	//staat = niks of "const" voor constant (final)
+	//type = int, byte ...
+
+Serieel:
+
+	Serial.begin(9600);
+	//connectie opstarten met 9600 bitRate (standaard)
+	Serial.print(<waarde>);
+	//stuur dit op
+	Serial.printLn(<waarde>);
+	//stuur op met een "next line"
